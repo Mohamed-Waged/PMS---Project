@@ -4,13 +4,14 @@
 ?>
 
 <div class="col-8 mx-auto">
-    <h1 class="text-center p-3 my-2 bg-dark text-light rounded">
+    <h1 class="text-center p-3 my-2 ">
         Add Category
     </h1>
     <?php if (Session::checkSession('success')) : ?>
         <div class="alert alert-success text-center" role="alert">
             <?= Session::getSession('success') ?>
         </div>
+        <?= Session::destroySession() ?>
     <?php endif ?>
 
     <?php
@@ -21,6 +22,7 @@
                     <?= $value ?>
                 </div>
             <?php endforeach;
+            Session::destroySession();
         endif;
     ?>
 

@@ -4,7 +4,7 @@
     require_once __DIR__.'/../../classes/Session.php';
 ?>
 <div class="col-8 mx-auto">
-    <h1 class="text-center p-3 my-4 bg-dark text-light rounded">
+    <h1 class="text-center p-3 my-4 ">
         Edit Category
     </h1>
     <?php if (Session::checkSession('success')) : ?>
@@ -13,11 +13,17 @@
         </div>
     <?php endif ?>
 
-    <?php if (Session::checkSession('errors')) : ?>
-        <div class="alert alert-danger text-center" role="alert">
-            <?= Session::getSession('errors') ?>
-        </div>
-    <?php endif ?>
+    <?php
+        if (Session::checkSession('errors')) : 
+            $errors = Session::getSession('errors');
+            foreach ($errors as $key => $value) : ?>
+                <div class="alert alert-danger text-center" role="alert">
+                    <?= $value ?>
+                </div>
+            <?php endforeach;
+            Session::destroySession();
+        endif;
+    ?>
 
     <?php 
     if(isset($_GET['id'])){

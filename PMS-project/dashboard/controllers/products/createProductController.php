@@ -37,4 +37,4 @@ if (!empty($validator->error)) {
 // No Error
 Session::setSession('success', 'Product Created Successfully');
 Product::createProduct($name,$price,$description,$category_id);
-redirect('dashboard/products/create.php');
+redirect('dashboard/products/index.php');

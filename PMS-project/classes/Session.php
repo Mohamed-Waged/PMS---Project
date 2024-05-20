@@ -21,4 +21,8 @@ class Session
     {
         return isset($_SESSION[$key]);
     }
+
+    public static function destroySession(){
+        session_destroy();
+    }
 }

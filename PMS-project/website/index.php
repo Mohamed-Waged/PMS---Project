@@ -4,7 +4,6 @@
     require_once __DIR__.'/../classes/Category.php'; 
     require_once __DIR__.'/../classes/Product.php';
     $categories = Category::getAllCategories();
-    // $products = Product::getAllProducts();
     if (isset($_GET['category_id'])) {
         $products = Product::getAllProductsTesting($_GET['category_id']);
     }else{
@@ -20,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Shop Homepage</title>
+    <title>PMS-SHOP</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
@@ -33,7 +32,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="<?= route('website') ?>">EraaSoft PMS</a>
+            <a class="navbar-brand" href="<?= route('website') ?>"><strong>PMS</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -86,7 +85,7 @@
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
             <?php if (empty($products)) : ?>
-                <div class="alert alert-danger text-center" role="alert">
+                <div class="alert alert-danger text-center my-5" role="alert">
                     No Products Found In This Category !
                 </div>
             <?php else : ?>
@@ -110,7 +109,7 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    <?= $product['price'] ?> $
+                                    <?= $product['price'] ?> <strong>$</strong>
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -127,7 +126,7 @@
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2024</p>
         </div>
     </footer>
     <!-- Bootstrap core JS-->

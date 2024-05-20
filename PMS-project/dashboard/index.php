@@ -1,13 +1,18 @@
 <?php require_once  __DIR__ . '/includes/header.php'; ?>
 <div class="col-12">
     
-    <div class="alert alert-success text-center mt-5" role="alert">
-        <h1 class="text-center">
-            Home Page
-        </h1>
+<div class="p-5 mb-4 bg-light rounded-3 my-5">
+    <div class="container-fluid py-5 text-center">
+        <h1 class="display-5 fw-bold">Dashboard Control </h1>
+        <p class="col-md-8 fs-4 mx-auto my-5">
+            Dashboard To control The Website <br>
+            Products (Create , Delete , Edit ) <br>
+            Categories (Create , Delete , Edit )
+        </p>
+        <button class="btn btn-outline-primary btn-lg px-4" type="button">
+            Show More
+        </button>
     </div>
-    <h2 class="text-center p-3 my-2">
-        Welcome : Mohamed Elfeky
-    </h2>
 </div>
+
 <?php require_once 'includes/footer.php'; ?>

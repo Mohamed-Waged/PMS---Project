@@ -6,7 +6,7 @@
     $categories = Category::getAllCategories();
 ?>
 <div class="col-8 mx-auto">
-    <h1 class="text-center p-3 my-4 bg-dark text-light rounded">
+    <h1 class="text-center p-3 my-4 ">
         Edit Product
     </h1>
 
@@ -14,6 +14,7 @@
         <div class="alert alert-success text-center" role="alert">
             <?= Session::getSession('success') ?>
         </div>
+        <?= Session::destroySession() ?>
     <?php endif ?>
 
     <?php
@@ -24,6 +25,7 @@
                     <?= $value ?>
                 </div>
             <?php endforeach;
+            Session::destroySession() ;
         endif;
     ?>
 

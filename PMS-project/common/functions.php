@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-define('URL', 'http://' . $_SERVER['HTTP_HOST'] . '/Group-320/task-10\project/');
+define('URL', 'http://' . $_SERVER['HTTP_HOST'] . '/Group-320/task-10\PMS-project/');
 
 
 function route($path = '')

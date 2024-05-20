@@ -10,10 +10,6 @@ $id = $_GET['id'];
 foreach ($_POST as $key => $value) {
     $$key = $value;
 }
-// echo "<pre>";
-// print_r($_POST);
-// die;
-
 $validator = new Validation;
 
 // Validtion For Name
@@ -37,6 +33,6 @@ if (!empty($validator->error)) {
 }
 
 // No Error
-Session::setSession('success', 'Product Created Successfully');
+Session::setSession('success', 'Product Updated Successfully');
 Product::editProduct($id,$name,$price,$description,$category_id);
-redirect('dashboard/products/create.php');
+redirect('dashboard/products/index.php');

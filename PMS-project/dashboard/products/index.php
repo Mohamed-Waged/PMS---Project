@@ -26,10 +26,10 @@
             No Products Found !
         </div>
     <?php else : ?>
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered table-striped text-center">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th>Id</th>
                     <th>Name</th>
                     <th>Category</th>
                     <th>Price</th>
